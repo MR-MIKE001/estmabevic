@@ -50,9 +50,9 @@ export default function Hero() {
               fontSize: 'clamp(3.5rem, 8vw, 6.5rem)',
             }}
           >
-            Building<br />
-            <em className="text-gold not-italic">Better</em><br />
-            Homes.
+             Solutions<br />
+            <em className="text-gold not-italic">That Grow</em><br />
+            Businesses.
           </h1>
 
           <p className="text-xl text-white/60 mb-12 leading-relaxed max-w-xl"

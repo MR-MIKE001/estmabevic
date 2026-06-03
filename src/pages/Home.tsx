@@ -5,6 +5,7 @@ import AboutSection    from '@/components/sections/AboutSection'
 import WhyUs           from '@/components/sections/WhyUs'
 import ClientsSection  from '@/components/sections/ClientsSection'
 import CTABanner       from '@/components/sections/CTABanner'
+import Partnership from '@/components/sections/Partnership.'
 
 export default function Home() {
   useEffect(() => {
@@ -20,6 +21,7 @@ export default function Home() {
       <AboutSection />
       <WhyUs />
       <ClientsSection />
+      <Partnership/>
       <CTABanner />
     </>
   )
