@@ -55,24 +55,24 @@ const PRODUCTS = [
   },
 ]
 
-const MARQUEE = [...PRODUCTS, ...PRODUCTS]
-
 export default function SWADPartnership() {
   return (
-    <section className="relative overflow-hidden" aria-labelledby="swad-heading"
-    style={{ background: 'linear-gradient(160deg,#0D0A2E,#150E45)',paddingTop:"5rem",
-        paddingBottom:"5rem"
-     }}>
-
+    <section
+      className="relative overflow-hidden"
+      aria-labelledby="swad-heading"
+      style={{
+        background: 'linear-gradient(160deg,#0D0A2E,#150E45)',
+        paddingTop: '5rem',
+        paddingBottom: '5rem',
+      }}
+    >
       {/* Header */}
       <div className="container pt-20 pb-14">
         <Reveal className="text-center">
-
           <h2 id="swad-heading" className="text-white text-4xl mb-4">
             Trusted <span className="text-yellow-500">Partnerships</span>
           </h2>
 
-          {/* ✅ FIXED LINK */}
           <p className="text-white/60 max-w-xl mx-auto">
             Official Regional Channel Partner of{' '}
             <a
@@ -84,7 +84,6 @@ export default function SWADPartnership() {
               SWAD Digital Solutions Ltd.
             </a>
           </p>
-
         </Reveal>
       </div>
 
@@ -92,9 +91,11 @@ export default function SWADPartnership() {
       <div className="container pb-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
           {PRODUCTS.map((p, i) => (
-            <Reveal key={p.name} delay={i % 4}>
+            <Reveal
+              key={p.name}
+              delay={(i % 5) as 0 | 1 | 2 | 3 | 4} // ✅ FIXED
+            >
               <article className="p-6 border border-yellow-500/20">
-
                 <div className="mb-4">{p.icon}</div>
 
                 <span className="text-xs text-yellow-500 uppercase">
@@ -108,7 +109,6 @@ export default function SWADPartnership() {
                 <p className="text-white/50 text-sm mt-2">
                   {p.desc}
                 </p>
-
               </article>
             </Reveal>
           ))}
@@ -119,7 +119,7 @@ export default function SWADPartnership() {
       <div className="container py-10">
         <Reveal>
           <a
-            href="https://wa.me/+2347011914628"
+            href="https://wa.me/2347011914628"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-green-500 text-white px-6 py-3"
@@ -128,7 +128,6 @@ export default function SWADPartnership() {
           </a>
         </Reveal>
       </div>
-
     </section>
   )
 }
